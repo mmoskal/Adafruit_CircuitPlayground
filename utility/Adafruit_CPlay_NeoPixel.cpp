@@ -58,8 +58,11 @@ Adafruit_CPlay_NeoPixel::Adafruit_CPlay_NeoPixel() :
 }
 
 Adafruit_CPlay_NeoPixel::~Adafruit_CPlay_NeoPixel() {
+  // Causes trouble, see https://github.com/adafruit/Adafruit_CircuitPlayground/issues/16
+  /*
   if(pixels)   free(pixels);
   if(pin >= 0) pinMode(pin, INPUT);
+  */
 }
 
 void Adafruit_CPlay_NeoPixel::begin(void) {
